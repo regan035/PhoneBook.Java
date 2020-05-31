@@ -125,10 +125,11 @@ public class AppPhoneBook {
 		String phone = null;
 		Address address = new Address();
 		Name name = new Name(firstName,lastName, phone, address);
+		Name phonebook = new Name();
 		
 		System.out.println("Please input new contact format as: (Last Name,First Name, Street Address, City, State, Zipcode, Phone Number)");
-		Name phonebook = new Name();
-		Scanner name1 = new Scanner(System.in);
+		
+		Scanner newName = new Scanner(System.in);
 		
 		
 		
