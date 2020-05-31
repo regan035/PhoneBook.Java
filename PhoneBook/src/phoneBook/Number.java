@@ -2,9 +2,27 @@ package phoneBook;
 
 public class Number {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
+		String number;
 
-	}
+		public Number() {
+			super();
+		}
 
+		public Number(String number) {
+			super();
+			this.number = number;
+		}
+
+		public String getNumber() {
+			return number;
+		}
+
+		public void setNumber(String number) {
+			this.number = number;
+		}
+		
+		
+
+	
 }

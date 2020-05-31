@@ -72,7 +72,7 @@ public class AppPhoneBook {
 		}
 		
 	}
-	public Name[] phonebook ;
+
 	
 	private static void listAll() {
 		System.out.println("list all");
@@ -118,14 +118,11 @@ public class AppPhoneBook {
 		System.out.println("deleteRecord");
 		menu();
 	}
+	
+	
 
 	private static void addNew() {
-		String firstName = null;
-		String lastName = null;
-		String phone = null;
-		Address address = new Address();
-		Name name = new Name(firstName,lastName, phone, address);
-		Name phonebook = new Name();
+
 		
 		System.out.println("Please input new contact format as: (Last Name,First Name, Street Address, City, State, Zipcode, Phone Number)");
 		

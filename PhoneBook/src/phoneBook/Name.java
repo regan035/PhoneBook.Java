@@ -3,20 +3,16 @@ package phoneBook;
 public class Name {
 	
 	private String lastName;
-	//private String middleName;
+	private String middleName;
 	private String firstName;
-	private String phone;
-	private Address address;
 	public Name() {
 		super();
 	}
-	public Name(String lastName,  String firstName, String phone, Address address) {
+	public Name(String lastName, String middleName, String firstName) {
 		super();
 		this.lastName = lastName;
-		//this.middleName = middleName;
+		this.middleName = middleName;
 		this.firstName = firstName;
-		this.phone = phone;
-		this.address = address;
 	}
 	public String getLastName() {
 		return lastName;
@@ -24,29 +20,21 @@ public class Name {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-//	public String getMiddleName() {
-//		return middleName;
-//	}
-//	public void setMiddleName(String middleName) {
-//		this.middleName = middleName;
-//	}
-	public String getFistName() {
+	public String getMiddleName() {
+		return middleName;
+	}
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
+	}
+	public String getFirstName() {
 		return firstName;
 	}
-	public void setFistName(String fistName) {
-		this.firstName = fistName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	public Address getAddress() {
-		return address;
-	}
-	public void setAddress(Address address) {
-		this.address = address;
+	@Override
+	public String toString() {
+		return "Name [lastName=" + lastName + ", middleName=" + middleName + ", firstName=" + firstName + "]";
 	}
 
 
