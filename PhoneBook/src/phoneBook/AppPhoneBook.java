@@ -90,32 +90,32 @@ public class AppPhoneBook {
 	}
 
 	private static void searchByFull() {
-		System.out.println("aaaa");
+		System.out.println("searchByFull");
 		menu();
 	}
 
 	private static void searchByLast() {
-		System.out.println("bbbbbbb");
+		System.out.println("searchByLast");
 		menu();
 	}
 
 	private static void searchByFirst() {
-		System.out.println("ccccccc");
+		System.out.println("searchByFirst");
 		menu();
 	}
 
 	private static  void searchByNum() {
-		System.out.println("bddddd");
+		System.out.println("searchByNum");
 		menu();
 	}
 
 	private static void updateRecord() {
-		System.out.println("eeeeeeee");
+		System.out.println("updateRecord");
 		menu();
 	}
 
 	private static void deleteRecord() {
-		System.out.println("ffffff");
+		System.out.println("deleteRecord");
 		menu();
 	}
 
@@ -128,8 +128,8 @@ public class AppPhoneBook {
 		
 		System.out.println("Please input new contact format as: (Last Name,First Name, Street Address, City, State, Zipcode, Phone Number)");
 		Name phonebook = new Name();
-		Scanner input = new Scanner(System.in);
-		String newContact = input.next();
+		Scanner name1 = new Scanner(System.in);
+		
 		
 		
 		menu();
