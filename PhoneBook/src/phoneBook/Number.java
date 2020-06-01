@@ -11,6 +11,7 @@ public class Number {
 
 		public Number(String number) {
 			super();
+			number = number.trim();
 			this.number = number;
 		}
 
@@ -21,8 +22,16 @@ public class Number {
 		public void setNumber(String number) {
 			this.number = number;
 		}
+
+		@Override
+		public String toString() {
+			String areaCode = number.substring(0,3);
+			String preFix = number.substring(3,6);
+			String num = number.substring(6);
+			return "("+areaCode + ")"+preFix+"-"+num;
+		}
 		
-		
+	
 
 	
 }

@@ -8,7 +8,7 @@ public class Name {
 	public Name() {
 		super();
 	}
-	public Name(String lastName, String middleName, String firstName) {
+	public Name(String firstName, String middleName, String lastName) {
 		super();
 		this.lastName = lastName;
 		this.middleName = middleName;
