@@ -6,12 +6,16 @@ public class AppPhoneBook {
 
 	
 	public static void main(String[] args) {
+		Name name = new Name();
+		Address address = new Address();
+		Number number = new Number();
 		
-		menu();
+		
+		displayMenu();
 		
 	}
 
-	private static void menu() {
+	private static void displayMenu() {
 		
 		System.out.println("Please Make a selecton below: ");
 		System.out.println("1. Add New Record");
@@ -32,6 +36,7 @@ public class AppPhoneBook {
 		switch(selection) {
 		
 		case 1:
+			
 			addNew();
 			break;
 		case 2:
@@ -66,7 +71,7 @@ public class AppPhoneBook {
 			break;
 		default:
 			System.out.println("Invalid Selection");
-			menu();
+			displayMenu();
 			break;
 			
 		}
@@ -76,60 +81,60 @@ public class AppPhoneBook {
 	
 	private static void listAll() {
 		System.out.println("list all");
-		menu();
+		displayMenu();
 	}
 
 	private static void searchByState() {
 		System.out.println("search by state");
-		menu();
+		displayMenu();
 	}
 
 	private static void searchByCity() {
 		System.out.println("search by city");
-		menu();
+		displayMenu();
 	}
 
 	private static void searchByFull() {
 		System.out.println("searchByFull");
-		menu();
+		displayMenu();
 	}
 
 	private static void searchByLast() {
 		System.out.println("searchByLast");
-		menu();
+		displayMenu();
 	}
 
 	private static void searchByFirst() {
 		System.out.println("searchByFirst");
-		menu();
+		displayMenu();
 	}
 
 	private static  void searchByNum() {
 		System.out.println("searchByNum");
-		menu();
+		displayMenu();
 	}
 
 	private static void updateRecord() {
 		System.out.println("updateRecord");
-		menu();
+		displayMenu();
 	}
 
 	private static void deleteRecord() {
 		System.out.println("deleteRecord");
-		menu();
+		displayMenu();
 	}
 	
 	
 
 	private static void addNew() {
 
+		AppPhoneBook[] PhoneBook = new AppPhoneBook[9999];
+		System.out.println("Please enter new record as: John Michael West Doe,574 Pole Ave, St. Petersburgh, FL,33701, 5413353131 ");
+		Scanner input = new Scanner(System.in);
+		//phonebook[]= {};
 		
-		System.out.println("Please input new contact format as: (Last Name,First Name, Street Address, City, State, Zipcode, Phone Number)");
-		
-		Scanner newName = new Scanner(System.in);
 		
 		
-		
-		menu();
+		displayMenu();
 	}	
 }
