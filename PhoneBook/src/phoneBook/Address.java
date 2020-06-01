@@ -1,11 +1,13 @@
 package phoneBook;
 
 public class Address {
-	
+	//data
 	private String street;
 	private String city;
 	private String state;
 	private String zip;
+	
+	//constructor
 	public Address() {
 		super();
 	}
@@ -16,6 +18,8 @@ public class Address {
 		this.state = state;
 		this.zip = zip;
 	}
+	
+	//methods
 	public String getStreet() {
 		return street;
 	}

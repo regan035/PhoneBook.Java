@@ -2,9 +2,10 @@ package phoneBook;
 
 public class Number {
 
-	
+		//data
 		String number;
-
+		
+		//constructor
 		public Number() {
 			super();
 		}
@@ -14,7 +15,8 @@ public class Number {
 			number = number.trim();
 			this.number = number;
 		}
-
+		
+		//methods
 		public String getNumber() {
 			return number;
 		}

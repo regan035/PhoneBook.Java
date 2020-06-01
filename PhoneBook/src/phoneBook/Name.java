@@ -1,10 +1,12 @@
 package phoneBook;
 
 public class Name {
-	
+	//data
 	private String lastName;
 	private String middleName;
 	private String firstName;
+	
+	//constructor
 	public Name() {
 		super();
 	}
@@ -14,6 +16,8 @@ public class Name {
 		this.middleName = middleName;
 		this.firstName = firstName;
 	}
+	
+	//methods
 	public String getLastName() {
 		return lastName;
 	}
