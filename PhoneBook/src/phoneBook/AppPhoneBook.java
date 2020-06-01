@@ -140,7 +140,7 @@ public class AppPhoneBook {
 		if(searchName.getFirstName().equals(first) && searchName.getMiddleName().equals(middle) && searchName.getLastName().equals(last)) {
 			System.out.println(entries[i].toString());
 		}
-		else{System.out.println("No record ");
+		else{System.out.println("No record found ");
 		}	
 		}
 	}
