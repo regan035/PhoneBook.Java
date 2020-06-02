@@ -36,7 +36,7 @@ public class Entry {
 		else {
 			String middle = " ";
 			for(int i =1;i<nameArray.length-1;i++) {
-				middle = middle+nameArray[i];
+				middle =middle+nameArray[i]+" ";
 			}
 			name = new Name(nameArray[0],middle,nameArray[nameArray.length-1]);
 		}
