@@ -29,7 +29,10 @@ public class AppPhoneBook {
 
 	public int displayMenu(Scanner input) {
 		
-		System.out.println("Please make a selecton below: ");
+		System.out.println("=====================================");
+		System.out.println("||  Please make a selecton below:  ||");
+		System.out.println("=====================================");
+		System.out.println(" ");
 		System.out.println("1. Add New Record");
 		System.out.println("2. Delete a Record");
 		System.out.println("3. Update a Record");
@@ -56,7 +59,7 @@ public class AppPhoneBook {
 			deleteRecord();
 			break;
 		case 3:
-			updateRecord();
+			updateRecord(input);
 			break;
 		case 4:
 			searchByNum(input);
@@ -97,6 +100,7 @@ public class AppPhoneBook {
 		System.out.println("List All Records ");
 		for(int i = 0;i< index;i++) {
 			System.out.println(entries[i].toString());
+
 		}
 		//displayMenu(null);
 	}
@@ -108,8 +112,12 @@ public class AppPhoneBook {
 		Address searchAddress=entries[i].getAddress();
 		if(searchAddress.getState().equals(state)) {
 			System.out.println(entries[i].toString());
+			System.out.println(" ");
+
 	}
 		else{System.out.println("No record found");
+		System.out.println(" ");
+
 		}	
 	}	
 	}
@@ -121,8 +129,11 @@ public class AppPhoneBook {
 		Address searchAddress=entries[i].getAddress();
 		if(searchAddress.getCity().equals(city)) {
 			System.out.println(entries[i].toString());
+			System.out.println(" ");
+
 	}
 		else{System.out.println("No record found");
+
 		}	
 	}	
 	}
@@ -139,8 +150,11 @@ public class AppPhoneBook {
 		Name searchName=entries[i].getName();
 		if(searchName.getFirstName().equals(first) && searchName.getMiddleName().equals(middle) && searchName.getLastName().equals(last)) {
 			System.out.println(entries[i].toString());
+			System.out.println(" ");
+
 		}
 		else{System.out.println("No record found ");
+
 		}	
 		}
 	}
@@ -152,8 +166,11 @@ public class AppPhoneBook {
 		Name searchName=entries[i].getName();
 		if(searchName.getLastName().equals(last)) {
 			System.out.println(entries[i]);
+			System.out.println(" ");
+
 		}
 		else{System.out.println("No record found");
+
 		}	
 		}
 	}
@@ -165,8 +182,11 @@ public class AppPhoneBook {
 		Name searchName=entries[i].getName();
 		if(searchName.getFirstName().equals(first)) {
 			System.out.println(entries[i]);
+			System.out.println(" ");
+
 		}
 		else{System.out.println("No record found");
+
 		}	
 		}
 	}
@@ -178,14 +198,34 @@ public class AppPhoneBook {
 		Number searchNum=entries[i].getNumber();
 		if(searchNum.getNumber().equals(num)) {
 			System.out.println(entries[i]);
+			System.out.println(" ");
+
 		}
 		else{System.out.println("No record found");
+
 		}	
 		}
 	}
 
-	public void updateRecord() {
-		System.out.println("updateRecord");
+	public void updateRecord(Scanner input) {
+		System.out.println("Please enter the number you want to update");
+		String num = input.nextLine();
+		for(int i = 0;i< index;i++) {
+		Number searchNum=entries[i].getNumber();
+		if(searchNum.getNumber().equals(num)) {
+			System.out.println(entries[i]);
+			System.out.println("Please input the new contact as as: John Michael West Doe,574 Pole Ave, St. Petersburgh, FL,33701, 5413353131");
+			Scanner newInput = new Scanner(System.in);
+			String tempInput = newInput.nextLine();
+			Entry tempInput1 = new Entry(tempInput);
+			entries[i]= tempInput1;
+			System.out.println("New record updated :"+entries[i]);
+			System.out.println(" ");
+
+		}
+		else{System.out.println("No record found");
+		}	
+		}
 		//displayMenu();
 	}
 
@@ -205,8 +245,9 @@ public class AppPhoneBook {
 		entries[index]=newEntry;
 		index++;
 		System.out.println("New Record Added");
+		System.out.println(" ");
 
-		
+
 		//displayMenu(input);
 	}	
 }
