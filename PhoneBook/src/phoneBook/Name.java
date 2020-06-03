@@ -11,7 +11,7 @@ public class Name {
 		
 	}
 	public Name(String firstName, String middleName, String lastName) {
-		super();
+		
 		this.lastName = lastName;
 		this.middleName = middleName;
 		this.firstName = firstName;

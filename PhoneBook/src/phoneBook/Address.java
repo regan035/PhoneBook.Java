@@ -9,7 +9,7 @@ public class Address {
 	
 	//constructor
 	public Address() {
-		super();
+		
 	}
 	public Address(String street, String city, String state, String zip) {
 		

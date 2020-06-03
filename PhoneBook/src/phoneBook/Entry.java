@@ -5,11 +5,12 @@ public class Entry {
 	private Name name;
 	private Address address;
 	private Number number;
+	
 	public Entry() {
-		super();
+		
 	}
 	public Entry(Name name, Address address, Number number) {
-		super();
+		
 		this.name = name;
 		this.address = address;
 		this.number = number;
@@ -18,15 +19,17 @@ public class Entry {
 	public Entry(String input) {
 		String[] inputArray = input.split(",");
 		
+		//name
 		handleName(inputArray[0]);
-		
+		//address
 		address = new Address(inputArray[1],inputArray[2],inputArray[3],inputArray[4]);
-		
+		//number
 		number = new Number(inputArray[5]);
 		
 	}
-	private void handleName(String str) {
-		String[] nameArray = str.split(" ");
+	
+	private void handleName(String nameInput) {
+		String[] nameArray = nameInput.split(" ");
 		if (nameArray.length==2) {
 			name = new Name(nameArray[0]," ",nameArray[1]);
 		}
@@ -43,7 +46,7 @@ public class Entry {
 	}
 	@Override
 	public String toString() {
-		return "Entry [name=" + name + ", address=" + address + ", number=" + number + "]";
+		return  name + "," + address + "," + number ;
 	}
 	
 	public Name getName() {

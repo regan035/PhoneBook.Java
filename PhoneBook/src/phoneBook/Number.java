@@ -7,11 +7,11 @@ public class Number {
 		
 		//constructor
 		public Number() {
-			super();
+			
 		}
 
 		public Number(String number) {
-			super();
+			
 			number = number.trim();
 			this.number = number;
 		}
