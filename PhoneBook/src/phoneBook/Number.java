@@ -30,7 +30,7 @@ public class Number {
 			String areaCode = number.substring(0,3);
 			String preFix = number.substring(3,6);
 			String num = number.substring(6);
-			return "("+areaCode + ")"+preFix+"-"+num;
+			return " ("+areaCode + ")"+preFix+"-"+num;
 		}
 		
 	

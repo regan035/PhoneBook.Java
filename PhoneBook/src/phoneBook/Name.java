@@ -8,7 +8,7 @@ public class Name {
 	
 	//constructor
 	public Name() {
-		super();
+		
 	}
 	public Name(String firstName, String middleName, String lastName) {
 		super();
@@ -38,7 +38,7 @@ public class Name {
 	}
 	@Override
 	public String toString() {
-		return "Name [lastName=" + lastName + ", middleName=" + middleName + ", firstName=" + firstName + "]";
+		return firstName + " " + middleName + " " + lastName ;
 	}
 
 
