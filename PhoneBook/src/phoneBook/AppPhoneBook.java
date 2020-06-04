@@ -7,12 +7,13 @@ public class AppPhoneBook {
 	int size;//defines max size of phone book
 	int index;//index of entry array
 	Entry[] entries;//entries of phone book
-	
+	Entry[] newEntries;//new list after delete
 	//constructor
 	public AppPhoneBook() {
 		size = 9999;
 		entries = new Entry[size];
 		index = 0;
+		newEntries = new Entry[entries.length-1];
 		
 	}
 	//methods
@@ -56,7 +57,7 @@ public class AppPhoneBook {
 			addNew(input);
 			break;
 		case 2:
-			deleteRecord();
+			deleteRecord(input);
 			break;
 		case 3:
 			updateRecord(input);
@@ -99,10 +100,13 @@ public class AppPhoneBook {
 	public void listAll() {
 		System.out.println("List All Records ");
 		for(int i = 0;i< index;i++) {
-			System.out.println(entries[i].toString());
+		System.out.println(entries[i].toString());
 
 		}
-		//displayMenu(null);
+		System.out.println("New list after delete: ");
+		for(int c =0; c<index;c++) {
+		System.out.println(newEntries[c].toString());
+	}
 	}
 
 	public void searchByState(Scanner input) {
@@ -208,7 +212,7 @@ public class AppPhoneBook {
 	}
 
 	public void updateRecord(Scanner input) {
-		System.out.println("Please enter the number you want to update");
+		System.out.println("Please enter the number you want to update. Numbers only,no '()' no '-' :");
 		String num = input.nextLine();
 		for(int i = 0;i< index;i++) {
 		Number searchNum=entries[i].getNumber();
@@ -216,12 +220,14 @@ public class AppPhoneBook {
 			System.out.println(entries[i]);
 			System.out.println("Please input the new contact as as: John Michael West Doe,574 Pole Ave, St. Petersburgh, FL,33701, 5413353131");
 			Scanner newInput = new Scanner(System.in);
+			
 			String tempInput = newInput.nextLine();
 			Entry tempInput1 = new Entry(tempInput);
 			entries[i]= tempInput1;
+			
 			System.out.println("New record updated :"+entries[i]);
 			System.out.println(" ");
-
+			
 		}
 		else{System.out.println("No record found");
 		}	
@@ -229,11 +235,38 @@ public class AppPhoneBook {
 		//displayMenu();
 	}
 
-	public void deleteRecord() {
-		System.out.println("deleteRecord");
-		//displayMenu(null);
+	public void deleteRecord(Scanner input) {
+		System.out.println("Please enter the number you want to update. Numbers only,no '()','-'or space :");
+		String num = input.nextLine();
+		for(int i = 0;i< index;i++) {
+		Number searchNum=entries[i].getNumber();
+		if(searchNum.getNumber().equals(num)) {
+			System.out.println(entries[i]);
+			System.out.println("Press 1 to delete record" );
+			System.out.println("Press 2 to cancel");
+			Scanner choice = new Scanner(System.in);
+			int choice1 = choice.nextInt();
+			if(choice1 == 1) {
+				for(int a =0, b= 0; a<entries.length;a++) {
+					if(a == i) {
+						continue;
+					}
+					newEntries[b++]=entries[i];
+					
+				}
+				System.out.println("Record has been deleted");
+					
+			}
+
+			if(choice1 ==2) {
+				displayMenu(input);
+			}
+			}
+		}
 	}
 
+
+	
 	public void addNew(Scanner input) {
 		System.out.println("Please enter new record as: John Michael West Doe,574 Pole Ave,St. Petersburgh,FL,33701,5413353131 ");
 		String entry = input.nextLine();
