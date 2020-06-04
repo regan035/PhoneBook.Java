@@ -103,10 +103,10 @@ public class AppPhoneBook {
 		System.out.println(entries[i].toString());
 
 		}
-		System.out.println("New list after delete: ");
-		for(int c =0; c<index;c++) {
-		System.out.println(newEntries[c].toString());
-	}
+//		System.out.println("New list after delete: ");
+//		for(int c =0; c<index;c++) {
+//		System.out.println(newEntries[c].toString());
+//	}
 	}
 
 	public void searchByState(Scanner input) {
@@ -218,10 +218,8 @@ public class AppPhoneBook {
 		Number searchNum=entries[i].getNumber();
 		if(searchNum.getNumber().equals(num)) {
 			System.out.println(entries[i]);
-			System.out.println("Please input the new contact as as: John Michael West Doe,574 Pole Ave, St. Petersburgh, FL,33701, 5413353131");
-			Scanner newInput = new Scanner(System.in);
-			
-			String tempInput = newInput.nextLine();
+			System.out.println("Please input the new contact as as: John Michael West Doe,574 Pole Ave, St. Petersburgh, FL,33701, 5413353131");	
+			String tempInput = input.nextLine();
 			Entry tempInput1 = new Entry(tempInput);
 			entries[i]= tempInput1;
 			
@@ -244,8 +242,7 @@ public class AppPhoneBook {
 			System.out.println(entries[i]);
 			System.out.println("Press 1 to delete record" );
 			System.out.println("Press 2 to cancel");
-			Scanner choice = new Scanner(System.in);
-			int choice1 = choice.nextInt();
+			int choice1 = input.nextInt();
 			if(choice1 == 1) {
 				for(int a =0, b= 0; a<entries.length;a++) {
 					if(a == i) {
