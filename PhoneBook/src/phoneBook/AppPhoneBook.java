@@ -107,35 +107,37 @@ public class AppPhoneBook {
 	public void searchByState(Scanner input) {
 		System.out.println("Please enter the state");
 		String state = input.nextLine();
+		boolean search = true;
 		for(int i = 0;i< entries.length;i++) {
 		Address searchAddress=entries[i].getAddress();
 		if(searchAddress.getState().equals(state)) {
 			System.out.println(entries[i].toString());
 			System.out.println(" ");
-
+			search = false;
 	}
-		else{System.out.println("No record found");
-		System.out.println(" ");
-
 		}	
+		if(search) {
+			System.out.println("No record found");	
 	}	
-	}
+		}
 
 	public void searchByCity(Scanner input) {
 		System.out.println("Please enter the city");
 		String city = input.nextLine();
+		boolean search = true;
 		for(int i = 0;i< entries.length;i++) {
 		Address searchAddress=entries[i].getAddress();
 		if(searchAddress.getCity().equals(city)) {
 			System.out.println(entries[i].toString());
 			System.out.println(" ");
+			search = false;
 
 	}
-		else{System.out.println("No record found");
-
-		}	
+		}
+		if(search) {
+			System.out.println("No record found");		
 	}	
-	}
+		}
 	
 	public void searchByFull(Scanner input) {
 		System.out.println("Please enter the full name");
@@ -145,32 +147,34 @@ public class AppPhoneBook {
 		String middle= input.nextLine();
 		System.out.println("Please enter the last name");
 		String last = input.nextLine();
+		boolean search = true;
 		for(int i = 0;i< entries.length;i++) {
 		Name searchName=entries[i].getName();
 		if(searchName.getFirstName().equals(first) && searchName.getMiddleName().equals(middle) && searchName.getLastName().equals(last)) {
 			System.out.println(entries[i].toString());
 			System.out.println(" ");
-
-		}
-		else{System.out.println("No record found ");
-
-		}	
+			search = false;
+		}		
+	}
+		if(search) {
+			System.out.println("No record found ");
 		}
 	}
 
 	public void searchByLast(Scanner input) {
 		System.out.println("Please enter a last name");
 		String last = input.nextLine();
+		boolean search = true;
 		for(int i = 0;i< entries.length;i++) {
 		Name searchName=entries[i].getName();
 		if(searchName.getLastName().equals(last)) {
 			System.out.println(entries[i]);
 			System.out.println(" ");
-
+			search = false;
 		}
-		else{System.out.println("No record found");
-
-		}	
+	}	
+		if(search) {
+		System.out.println("No record found");
 		}
 	}
 
@@ -184,7 +188,7 @@ public class AppPhoneBook {
 			System.out.println(entries[i]);
 			System.out.println(" ");
 			search = false;
-			break;
+			//break;
 		}
 	}
 		if(search) {
@@ -202,7 +206,7 @@ public class AppPhoneBook {
 			System.out.println(entries[i]);	
 			System.out.println(" ");
 			search = false;
-			break;
+			//break;
 		}
 
 		}
