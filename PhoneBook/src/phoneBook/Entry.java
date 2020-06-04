@@ -46,7 +46,7 @@ public class Entry {
 	}
 	@Override
 	public String toString() {
-		return  name + "," + address + "," + number ;
+		return name+","+address+","+number;
 	}
 	
 	public Name getName() {

@@ -235,7 +235,7 @@ public class AppPhoneBook {
 	}
 
 	public void addNew(Scanner input) {
-		System.out.println("Please enter new record as: John Michael West Doe,574 Pole Ave, St. Petersburgh, FL,33701, 5413353131 ");
+		System.out.println("Please enter new record as: John Michael West Doe,574 Pole Ave,St. Petersburgh,FL,33701,5413353131 ");
 		String entry = input.nextLine();
 		if(index>=size) {
 			System.out.println("Error:Phonebook is full");
