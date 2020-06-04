@@ -7,13 +7,13 @@ public class AppPhoneBook {
 	int size;//defines max size of phone book
 	int index;//index of entry array
 	Entry[] entries;//entries of phone book
-	Entry[] newEntries;//new list after delete
+	//Entry[] newEntries;//new list after delete
 	//constructor
 	public AppPhoneBook() {
 		size = 9999;
 		entries = new Entry[size];
 		index = 0;
-		newEntries = new Entry[entries.length-1];
+		//newEntries = new Entry[entries.length-1];
 		
 	}
 	//methods
@@ -203,7 +203,6 @@ public class AppPhoneBook {
 		if(searchNum.getNumber().equals(num)) {
 			System.out.println(entries[i]);
 			System.out.println(" ");
-
 		}
 		else{System.out.println("No record found");
 
@@ -242,20 +241,16 @@ public class AppPhoneBook {
 			System.out.println(entries[i]);
 			System.out.println("Press 1 to delete record" );
 			System.out.println("Press 2 to cancel");
-			int choice1 = input.nextInt();
-			if(choice1 == 1) {
-				for(int a =0, b= 0; a<entries.length;a++) {
-					if(a == i) {
-						continue;
-					}
-					newEntries[b++]=entries[i];
-					
+			int choice = input.nextInt();
+			if(choice == 1) {
+				for(int a =i; a<entries.length;a++) {
+				entries[i]= entries[i+1];
 				}
 				System.out.println("Record has been deleted");
 					
 			}
 
-			if(choice1 ==2) {
+			if(choice ==2) {
 				displayMenu(input);
 			}
 			}
