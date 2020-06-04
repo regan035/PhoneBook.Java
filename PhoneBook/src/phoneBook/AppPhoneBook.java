@@ -198,15 +198,19 @@ public class AppPhoneBook {
 	public  void searchByNum(Scanner input) {
 		System.out.println("Please enter a number");
 		String num = input.nextLine();
+		boolean search = true;
 		for(int i = 0;i< index;i++) {
 		Number searchNum=entries[i].getNumber();
 		if(searchNum.getNumber().equals(num)) {
-			System.out.println(entries[i]);
+			System.out.println(entries[i]);	
 			System.out.println(" ");
+			search = false;
+			break;
 		}
-		else{System.out.println("No record found");
 
-		}	
+		}
+		if(search) {
+		System.out.println("No record found");
 		}
 	}
 
