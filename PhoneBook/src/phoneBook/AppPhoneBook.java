@@ -9,7 +9,6 @@ public class AppPhoneBook {
 
 	public AppPhoneBook() {
 
-		
 	}
 	//methods
 	public static void main(String[] args) {
