@@ -3,7 +3,7 @@ package phoneBook;
 public class Number {
 
 		//data
-		String number;
+		private String number;
 		
 		//constructor
 		public Number() {
